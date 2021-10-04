@@ -8,8 +8,12 @@
  * @return {void} Do not return anything, modify s in-place instead.
  */
 var reverseString = function(s) {
-
-//WHILE LOOP OPTION
+//THIS WORKS, TOO (2ND SOLUTION)
+  s.reverse()
+//THIS WORKS, (3RD SOLUTION) 
+  //it does return something
+  return [...s].reverse().join('');
+//WHILE LOOP OPTION (1ST SOLUTION)
     let index1 = 0;
     let index2 = s.length - 1;
     while (index1 < index2){
@@ -18,7 +22,6 @@ var reverseString = function(s) {
         s[index2] = temp;
         index1++;
         index2--;
-
     }; 
     // return s;  //don't need return making runtime a bit slower with this return
          
