@@ -26,5 +26,18 @@ var reverseString = function(s) {
         index2--;
     }; 
     // return s;  //don't need return making runtime a bit slower with this return, at 132 ms runtime
+
+      let l = 0;
+  let r = s.length - 1;
+  
+  while(l < r) {
+     //try this 
+     [s[r--], s[l++]] = [s[l], s[r]] //runtime 184 ms
+    //or this
+    let tmp = s[r];    //runtime 162ms
+    s[r--] = s[l];
+    s[l++] = tmp;
+  }
+       
          
 }
